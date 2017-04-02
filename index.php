@@ -64,6 +64,7 @@
       <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <article>
+      <h2>This is a test for a git bash commit</h2>
       <h1 class="articleTitle">This will be a post title</h1>
       <p class="articleText">This will be the text area</p>
       <p class="comments">This part is for the comments, social media stuff</p>
