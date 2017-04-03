@@ -14,3 +14,82 @@ h1 {
 h2 {
   color: #000;
 }
+
+.myNameOnNavbar h3 {
+	color: #fff;
+	background-color: #005689;
+	text-transform: uppercase;
+	letter-spacing: 0.10em;
+	padding: 20px 10px 5px;
+	margin-left: 10px;
+}
+/*Navigation area*/
+
+.navbar {
+	top: 0;
+	position: fixed;
+	background-color: aqua;
+	border-bottom: 5px solid #fff;
+	z-index: 10; 
+}
+
+.navbar-inverse .navbar-nav>.active>a:visited {
+	background-color: aqua;
+	border-radius: 10px;
+}
+
+.navbar-inverse .navbar-nav>.active>a:link {
+	background-color: aqua;
+	border-radius: 10px;
+}
+
+.navbar li {
+	background-color: aqua;
+	text-transform: uppercase;
+        font-size: 20px;
+	letter-spacing: 0.10em;
+	padding: 15px 10px 5px;
+	margin-right: 10px;
+}
+
+.nav a {
+	color: #000 !important;
+}
+
+.nav a:hover {
+	color: #fff !important;
+	transition: color 600ms;
+	-webkit-transition: color 600ms;
+}
+/*end navigation*/
+
+.jumbotron {
+  margin-top: 70px;
+  text-align: center;
+}
+/*main page css*/
+
+.articleTitle {
+  background-color: yellow;
+  
+}
+
+.articleText {
+  background-color: pink;
+  font-size: 50px;
+}
+
+.comments {
+  background-color: bisque;
+}
+
+.asideCSS {
+  background-color: aqua;
+}
+/*footer css*/
+footer {
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  background-color: blue;
+  color: #000;
+}
