@@ -1,9 +1,24 @@
 <!DOCTYPE html>
+<?php 
+// define variables and set to empty values
+$username = $password = "";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $username = test_input($_POST["username"]);
+  $password = test_input($_POST["password"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title></title>  
+    <title>Login</title>  
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -33,7 +48,7 @@
   </header><!--end nav header-->
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#faq">Learn More</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -42,33 +57,24 @@
   </div>
 </nav><!--end navbar-->
 <!--end navigation-->
-<div class="container-fluid">
-  <div class="jumbotron" id="home">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Tech Girls Blog</h1>
-      </div>
-    </div>
-  </div><!--end jumbotron-->
-</div><!--end container-->
-    <?php
-    $str = "Hello Girls, this is the start of our Blog";
-    $revStr = strrev($str);
-    $origStr = strrev($revStr);
-    ?>
-    <h1 class="centre">Welcome to the Blog</h1>
-    <h2 class="centre"><?= $revStr; ?></h2>
-    <h2 class="centre">and</h2>
-    <h2 class="centre"><?= $origStr; ?></h2>
-    <div class="container">
+<div class="container" id="loginDown">
       <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-    <article>
-      <h2>This is a test for a git bash commit</h2>
-      <h1 class="articleTitle">This will be a post title</h1>
-      <p class="articleText">This will be the text area</p>
-      <p class="comments">This part is for the comments, social media stuff</p>
-    </article>
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method ="POST">
+  Username:<br>
+  <input type="text" name="username" value="Enter your username">
+  <br>
+  Password:<br>
+  <input type="password" name="password">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+  <?php        
+echo "<h2>Your Input:</h2>";
+echo "<h2>Your Username is: $username </h2>";
+echo "<h2>Your password is: $password </h2>";
+
+?>
         </div>
         <div class="col-md-3 col-xs-12">
           <aside class="asideCSS">
@@ -80,11 +86,9 @@
                 <li>Etc</li>
               </ul>
           </aside>
+        </div>
       </div>
-    </div>
-    </div>
-    <footer>
-      <h3>This is a footer</h3>
-    </footer>
+</div>
+    
   </body>
-</html>
+  </html>
