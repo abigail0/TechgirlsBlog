@@ -90,7 +90,7 @@ CREATE TABLE `user` (
   `Password` varchar(64) NOT NULL,
   `Email` varchar(64) NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'MUnderwood','a94a8fe5ccb19ba61c4c0873d391e987982fbbd3','matint@iorek.plus.com'),(2,'MelUnderwood','test','matint@iorek.plus.com');
+INSERT INTO `user` VALUES (1,'MUnderwood','a94a8fe5ccb19ba61c4c0873d391e987982fbbd3','matint@iorek.plus.com'),(2,'MelUnderwood','a94a8fe5ccb19ba61c4c0873d391e987982fbbd3','matint@iorek.plus.com');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-05 17:29:25
+-- Dump completed on 2017-04-05 18:14:06
